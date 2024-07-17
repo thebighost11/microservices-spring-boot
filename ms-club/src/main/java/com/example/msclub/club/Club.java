@@ -10,14 +10,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "club")
 public class Club {
 
+    @Id
     private String id;
     private String clubName;
     private String clubLeague;
-
-    @Id
-    private String id;
-    private String clubPlace;
-    private String clubDate;
-
 }
 

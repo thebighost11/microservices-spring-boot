@@ -1,0 +1,9 @@
+FROM eclipse-temurin:17-jdk-alpine
+
+WORKDIR /ms-club
+
+EXPOSE 8081
+
+ADD target/*.jar ms-club-0.0.1-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "ms-club-0.0.1-SNAPSHOT.jar"]

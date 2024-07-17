@@ -1,0 +1,9 @@
+FROM eclipse-temurin:17-jdk-alpine
+
+WORKDIR /Eureka-server
+
+EXPOSE 8888
+
+ADD target/*.jar Eureka-server-0.0.1-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "Eureka-server-0.0.1-SNAPSHOT.jar"]

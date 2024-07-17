@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@RestController
+
 public class GatewayServiceApplication {
 
 	public static void main(String[] args) {

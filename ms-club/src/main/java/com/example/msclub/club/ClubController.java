@@ -22,7 +22,7 @@ public class ClubController {
 
     @GetMapping("/{id}")
     public ClubDTO getClubById(@PathVariable String id) {
-        log.info("this club is solicited now");
+        log.info("! club is delivered");
         return clubService.getClubById(id);
     }
 
@@ -32,7 +32,9 @@ public class ClubController {
     }
 
     @PutMapping("/{id}")
-    public ClubDTO updateClub(@PathVariable String id, @RequestBody ClubDTO clubDTO) {return clubService.saveClub(clubDTO);}
+    public ClubDTO updateClub(@PathVariable String id, @RequestBody ClubDTO clubDTO) {
+        return clubService.saveClub(clubDTO);
+    }
 
     @DeleteMapping("/{id}")
     public void deleteClub(@PathVariable String id) {

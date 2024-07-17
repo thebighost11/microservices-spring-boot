@@ -1,0 +1,9 @@
+FROM eclipse-temurin:17-jdk-alpine
+
+WORKDIR /ms-player
+
+EXPOSE 8083
+
+ADD target/*.jar ms-player-0.0.1-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "ms-player-0.0.1-SNAPSHOT.jar"]
